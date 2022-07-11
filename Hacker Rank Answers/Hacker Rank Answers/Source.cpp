@@ -20,7 +20,14 @@ int max_of_four(int a, int b, int c, int d)
         ans = d;
     return ans;
 }
-
+//Pointer
+void update(int* a, int* b) {
+    // Complete this function
+    int ne = *a;
+    int qe = *b;
+    *a = ne + qe;
+    *b = abs(ne - qe);
+}
 
 int main() 
 {
@@ -91,7 +98,12 @@ int main()
     printf("%d", ans);
 
     //Pointer
+    int p, o =0;
+    int* pa = &p, * pb = &o;
 
+    scanf_s("%d %d", &p, &o);
+    update(pa, pb);
+    printf("%d\n%d", p, o);
 
     //Variable sized arrays
 
